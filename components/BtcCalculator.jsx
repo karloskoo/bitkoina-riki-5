@@ -1,5 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 
+// Normalize decimal input - accept both . and , as decimal separator
+const normalizeDecimal = (value) => {
+  return value.replace(/,/g, '.');
+};
+
 export default function BtcCalculator({ btcPrice, priceSource, lastUpdated, loading, fetchPrice }) {
   const [eurAmount, setEurAmount] = useState('100');
   const [btcAmount, setBtcAmount] = useState('');
@@ -19,7 +24,7 @@ export default function BtcCalculator({ btcPrice, priceSource, lastUpdated, load
 
   // Convert from EUR
   const convertFromEur = useCallback((eur) => {
-    const eurNum = parseFloat(eur) || 0;
+    const eurNum = parseFloat(normalizeDecimal(eur)) || 0;
     const btc = eurNum / currentPrice;
     const sats = btc * 100000000;
     setBtcAmount(btc > 0 ? btc.toFixed(8) : '');
@@ -28,7 +33,7 @@ export default function BtcCalculator({ btcPrice, priceSource, lastUpdated, load
 
   // Convert from BTC
   const convertFromBtc = useCallback((btc) => {
-    const btcNum = parseFloat(btc) || 0;
+    const btcNum = parseFloat(normalizeDecimal(btc)) || 0;
     const eur = btcNum * currentPrice;
     const sats = btcNum * 100000000;
     setEurAmount(eur > 0 ? eur.toFixed(2) : '');
@@ -37,7 +42,7 @@ export default function BtcCalculator({ btcPrice, priceSource, lastUpdated, load
 
   // Convert from Satoshis
   const convertFromSats = useCallback((sats) => {
-    const satsNum = parseFloat(sats.replace(/\s/g, '').replace(/,/g, '')) || 0;
+    const satsNum = parseFloat(normalizeDecimal(sats).replace(/\s/g, '').replace(/\./g, '')) || 0;
     const btc = satsNum / 100000000;
     const eur = btc * currentPrice;
     setEurAmount(eur > 0 ? eur.toFixed(2) : '');
