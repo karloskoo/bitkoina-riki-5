@@ -1,0 +1,36 @@
+{
+  "name": "Nakamoto.lv - Bitcoin Rīki Latvijai",
+  "short_name": "Nakamoto.lv",
+  "description": "Pensiju fondu salīdzinājums ar Bitcoin un BTC kalkulators",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a0a00",
+  "theme_color": "#fb923c",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "lv",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "utilities"],
+  "shortcuts": [
+    {
+      "name": "BTC Kalkulators",
+      "short_name": "Kalkulators",
+      "description": "Bitcoin EUR Satoshi konvertors",
+      "url": "/kalkulators",
+      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}
