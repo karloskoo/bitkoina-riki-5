@@ -241,17 +241,20 @@ export default function Layout({ children }) {
             ₿ Bitcoin Rīki
           </h1>
           <p style={{ color: '#a3a3a3', fontSize: '13px', letterSpacing: '0.5px' }}>
-            Pensiju fondu salīdzinājums & BTC Kalkulators
+            Pensiju fondu salīdzinājums • BTC Kalkulators • Izglītība
           </p>
         </div>
 
         {/* Navigation Tabs */}
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '4px' }}>
           <Link href="/" className={`tab-link ${router.pathname === '/' ? 'active' : ''}`}>
             📊 Pensijas vs BTC
           </Link>
           <Link href="/kalkulators" className={`tab-link ${router.pathname === '/kalkulators' ? 'active' : ''}`}>
-            💱 BTC Kalkulators
+            💱 Kalkulators
+          </Link>
+          <Link href="/par-bitcoin" className={`tab-link ${router.pathname === '/par-bitcoin' ? 'active' : ''}`}>
+            ₿ Par Bitcoin
           </Link>
         </div>
 
