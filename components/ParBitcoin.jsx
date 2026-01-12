@@ -1,12 +1,25 @@
 export default function ParBitcoin() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+      {/* Import modern font for this page */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+        .article-text {
+          font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+          line-height: 1.8;
+        }
+        .article-heading {
+          font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        }
+      `}</style>
+      
       <h1 style={{
         fontSize: '24px',
         fontWeight: 700,
         color: '#fb923c',
         marginBottom: '24px',
-        textAlign: 'center'
+        textAlign: 'center',
+        fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif"
       }}>
         Kāpēc pasaule pērk bitkoinu?
       </h1>
@@ -18,7 +31,7 @@ export default function ParBitcoin() {
         padding: '16px',
         marginBottom: '24px'
       }}>
-        <p style={{ color: '#fef3c7', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>
+        <p className="article-text" style={{ color: '#fef3c7', fontSize: '15px', margin: 0 }}>
           Bitkoins pēdējos gados ir kļuvis par nopietnu finanšu instrumentu, ko iegādājas ne tikai individuālie investori, bet arī uzņēmumi un pat valstis. Aiz šīs intereses slēpas vairāki būtiski iemesli, kas atspoguļo mūsdienu ekonomikas izaicinājumus un tehnoloģiju attīstību.
         </p>
       </div>
@@ -27,11 +40,11 @@ export default function ParBitcoin() {
       <div className="card" style={{ marginBottom: '16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
           <span style={{ fontSize: '28px' }}>🛡️</span>
-          <h2 style={{ color: '#fb923c', fontSize: '16px', fontWeight: 600, margin: 0 }}>
+          <h2 className="article-heading" style={{ color: '#fb923c', fontSize: '16px', fontWeight: 600, margin: 0 }}>
             Aizsardzība pret inflāciju
           </h2>
         </div>
-        <p style={{ color: '#a3a3a3', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>
+        <p className="article-text" style={{ color: '#a3a3a3', fontSize: '14px', margin: 0 }}>
           Bitkoins piedāvā aizsardzību pret tradicionālās naudas devalvāciju. Fiat valūtas nepārtraukti zaudē pirktspēju inflācijas dēļ – centrālās bankas turpina drukāt naudu, bet <strong style={{ color: '#22d3ee' }}>bitkoina daudzums ir stingri ierobežots līdz 21 miljonam vienību</strong>. Tas padara to par efektīvu vērtības saglabāšanas līdzekli gan laikā, gan telpā, līdzīgi zeltam, tikai digitālā formā.
         </p>
       </div>
@@ -40,11 +53,11 @@ export default function ParBitcoin() {
       <div className="card" style={{ marginBottom: '16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
           <span style={{ fontSize: '28px' }}>🌍</span>
-          <h2 style={{ color: '#fb923c', fontSize: '16px', fontWeight: 600, margin: 0 }}>
+          <h2 className="article-heading" style={{ color: '#fb923c', fontSize: '16px', fontWeight: 600, margin: 0 }}>
             Kapitāla brīvība
           </h2>
         </div>
-        <p style={{ color: '#a3a3a3', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>
+        <p className="article-text" style={{ color: '#a3a3a3', fontSize: '14px', margin: 0 }}>
           Bitkoins ļauj izņemt kapitālu no autoritāru režīmu un nestabilu jurisdikciju kontroles. Valstīs ar vājām institūcijām vai politisku nestabilitāti cilvēki saskaras ar konta iesaldēšanas, kapitāla kontroles vai pat pilnīgas īpašuma konfiskācijas risku. Bitkoins piedāvā alternatīvu – <strong style={{ color: '#22d3ee' }}>naudu, ko nevar vienkārši atņemt vai bloķēt</strong>.
         </p>
       </div>
@@ -53,11 +66,11 @@ export default function ParBitcoin() {
       <div className="card" style={{ marginBottom: '16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
           <span style={{ fontSize: '28px' }}>🔐</span>
-          <h2 style={{ color: '#fb923c', fontSize: '16px', fontWeight: 600, margin: 0 }}>
+          <h2 className="article-heading" style={{ color: '#fb923c', fontSize: '16px', fontWeight: 600, margin: 0 }}>
             Nekonfiscējams īpašums
           </h2>
         </div>
-        <p style={{ color: '#a3a3a3', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>
+        <p className="article-text" style={{ color: '#a3a3a3', fontSize: '14px', margin: 0 }}>
           Šis nekonfiscējamais raksturs ir īpaši vērtīgs. Ja privātās atslēgas tiek pareizi glabātas, <strong style={{ color: '#22d3ee' }}>neviens – ne valdība, ne banka – nevar piekļūt jūsu līdzekļiem</strong> bez jūsu atļaujas. Tas ir fundamentāli jauns īpašumtiesību veids digitālajā laikmetā.
         </p>
       </div>
@@ -66,11 +79,11 @@ export default function ParBitcoin() {
       <div className="card" style={{ marginBottom: '16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
           <span style={{ fontSize: '28px' }}>💻</span>
-          <h2 style={{ color: '#fb923c', fontSize: '16px', fontWeight: 600, margin: 0 }}>
+          <h2 className="article-heading" style={{ color: '#fb923c', fontSize: '16px', fontWeight: 600, margin: 0 }}>
             Patiesi digitāla nauda
           </h2>
         </div>
-        <p style={{ color: '#a3a3a3', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>
+        <p className="article-text" style={{ color: '#a3a3a3', fontSize: '14px', margin: 0 }}>
           Michael Saylor un citi domātāji uzsver naudas digitalizācijas neizbēgamību. Mēs jau dzīvojam digitālā pasaulē, un bitkoins ir <strong style={{ color: '#22d3ee' }}>pirmā patiesi digitālā nauda</strong> – nevis tikai skaitlis bankas datubāzē, bet matemātiski aizsargāts aktīvs.
         </p>
       </div>
@@ -79,11 +92,11 @@ export default function ParBitcoin() {
       <div className="card" style={{ marginBottom: '16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
           <span style={{ fontSize: '28px' }}>⚡</span>
-          <h2 style={{ color: '#fb923c', fontSize: '16px', fontWeight: 600, margin: 0 }}>
+          <h2 className="article-heading" style={{ color: '#fb923c', fontSize: '16px', fontWeight: 600, margin: 0 }}>
             Globāli maksājumi bez starpniekiem
           </h2>
         </div>
-        <p style={{ color: '#a3a3a3', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>
+        <p className="article-text" style={{ color: '#a3a3a3', fontSize: '14px', margin: 0 }}>
           Bitkoins ļauj veikt globālus maksājumus bez starpniekiem, bez kavēšanās un ar atvērtu tehnoloģiju. <strong style={{ color: '#22d3ee' }}>Nav nepieciešamas bankas, nav darba laika ierobežojumu, nav ģeogrāfisku barjeru.</strong>
         </p>
       </div>
@@ -92,11 +105,11 @@ export default function ParBitcoin() {
       <div className="card" style={{ marginBottom: '24px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
           <span style={{ fontSize: '28px' }}>🌐</span>
-          <h2 style={{ color: '#fb923c', fontSize: '16px', fontWeight: 600, margin: 0 }}>
+          <h2 className="article-heading" style={{ color: '#fb923c', fontSize: '16px', fontWeight: 600, margin: 0 }}>
             Decentralizēts tīkls
           </h2>
         </div>
-        <p style={{ color: '#a3a3a3', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>
+        <p className="article-text" style={{ color: '#a3a3a3', fontSize: '14px', margin: 0 }}>
           Bitkoina tīkls <strong style={{ color: '#22d3ee' }}>nepieder vienai personai, grupai vai uzņēmumam</strong> – tas pieder visiem lietotājiem.
         </p>
       </div>
@@ -109,10 +122,10 @@ export default function ParBitcoin() {
         padding: '20px',
         textAlign: 'center'
       }}>
-        <p style={{ color: '#fef3c7', fontSize: '14px', lineHeight: 1.7, marginBottom: '16px' }}>
+        <p className="article-text" style={{ color: '#fef3c7', fontSize: '15px', marginBottom: '16px' }}>
           Ja kaut viens no šiem pielietojumiem šķiet vērtīgs, iesaku vairāk iedziļināties Bitkoina darbībā, principos un kā tas maina pasauli.
         </p>
-        <p style={{ color: '#a3a3a3', fontSize: '14px', lineHeight: 1.7, marginBottom: '16px' }}>
+        <p className="article-text" style={{ color: '#a3a3a3', fontSize: '14px', marginBottom: '16px' }}>
           Vēl labāk – <strong style={{ color: '#fb923c' }}>iegādāties mazu daudzumu Bitkoinu</strong>, piemēram, 50 eiro vērtībā, un pārbaudīt uz savas ādas, kā tas strādā. Praktiska pieredze palīdzēs labāk izprast šīs tehnoloģijas potenciālu.
         </p>
         <div style={{
@@ -122,7 +135,7 @@ export default function ParBitcoin() {
           padding: '12px',
           marginTop: '16px'
         }}>
-          <p style={{ color: '#22d3ee', fontSize: '14px', fontWeight: 600, margin: 0 }}>
+          <p className="article-text" style={{ color: '#22d3ee', fontSize: '14px', fontWeight: 600, margin: 0 }}>
             💡 Lai veicas jautājumu uzdošanā un atbilžu atrašanā!
           </p>
         </div>
